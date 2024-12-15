@@ -41,6 +41,11 @@ const usurper =      ["Usurper",       "Deity",         "Monarch"];
 const pride =        ["Pride",         "Deity",         "Monarch"];
 const forgotten =    ["Forgotten",     "Deity",         "Monarch"];
 const paramount =    ["Paramount",     "Deity",         "Monarch"];
+
+const player =       ["You",           "Phonomania",    "Victor"];
+const stopped =      ["Stopped",       "Imprisoned",    "Prevented"];
+const completely =   ["Completely",    "Thorough",      "Undisputed"];
+const existed =      ["Existed",       "Been",          "Deity"]
 /* eslint-enable no-multi-spaces */
 
 export const pelleQuotes = {
@@ -358,6 +363,92 @@ export const pelleQuotes = {
         1: destroyer
       }
     ],
+  },
+  beatPelle: {
+    id: 12,
+    lines: [
+      "Why did you get here?",
+      "You make me have to admit my weakness.",
+      "In front of you.",
+      {
+        text: "$1.",
+        1: completely,
+      },
+      {
+        text: "But $1, should be $2.",
+        1: player,
+        2: stopped,
+      },
+      "I have realized my faults.",
+      {
+        text: "They are so powerful that I have to use their strength to $1 $2.",
+        1: stopped,
+        2: player,
+      },
+      {
+        text: "$1.",
+        background: primaryBackground("teresa"),
+      },
+      {
+        text: "I finally understand your purpose.",
+        background: primaryBackground("teresa"),
+      },
+      {
+        text: "You don't want my legacy.",
+        background: primaryBackground("effarig"),
+      },
+      {
+        text: "You don't want my freedom.",
+        background: primaryBackground("enslaved"),
+      },
+      {
+        text: "You don't want my achievement.",
+        background: primaryBackground("v"),
+      },
+      {
+        text: "You don't want my rememberence.",
+        background: primaryBackground("ra"),
+      },
+      {
+        text: "You don't want my chanllenge.",
+        background: primaryBackground("laitela"),
+      },
+      {
+        text: "Control.",
+        background: flashCelestial,
+      },
+      {
+        text: "Massacre.",
+        background: flashCelestial,
+      },
+      {
+        text: "This is your ugly face.",
+        background: flashCelestial,
+      },
+      {
+        text: "We're sorry for our careless that didn't see you clearly.",
+        background: flashCelestial,
+      },
+      {
+        text: "You lunatic.",
+        background: flashCelestial,
+      },
+      {
+        text: "It's time to judge $1, even if we'll never have $2",
+        1: player,
+        2: existed,
+        background: flashCelestial,
+      },
+      {
+        text: "Welcome to.",
+        background: flashCelestial,
+      },
+      {
+        text: "the $1 Cage.",
+        1: forever,
+        background: flashCelestial,
+      }
+    ]
   },
   galaxyGeneratorUnlock: {
     id: 7,

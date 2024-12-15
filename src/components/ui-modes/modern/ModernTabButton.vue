@@ -136,6 +136,14 @@ export default {
   background-color: var(--color-celestials);
 }
 
+.o-tab-btn--pasts::before {
+  background-color: var(--color-pasts);
+}
+
+.o-tab-btn--timespace::before {
+  background-color: var(--color-timespace);
+}
+
 .o-subtab-btn--active {
   border-bottom-width: 0.5rem;
 }

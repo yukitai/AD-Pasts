@@ -22,7 +22,7 @@ export const Effarig = {
     Tab.reality.glyphs.show(false);
   },
   get isRunning() {
-    return player.celestials.effarig.run;
+    return player.timespace.unlock || player.celestials.effarig.run;
   },
   get currentStage() {
     if (!EffarigUnlock.infinity.isUnlocked) {

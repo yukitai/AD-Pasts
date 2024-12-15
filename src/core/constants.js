@@ -495,6 +495,18 @@ window.PROGRESS_STAGE = {
   IMAGINARY_MACHINES: 15,
   LAITELA: 16,
   PELLE: 17,
+
+  TIMESPACE: 18,
+  
+  PAST_TERESA: 19,
+  PAST_EFFARIG: 20,
+  PAST_ENSLAVED: 21,
+  PAST_V: 22,
+  PAST_RA: 23,
+  PAST_LAITELA: 24,
+  PAST_PELLE: 25,
+  PAST_ME: 26,
+  PAST_ME_END: 27,
 };
 
 window.STD_BACKEND_URL = "https://antimatterdimensionspayments.ew.r.appspot.com";

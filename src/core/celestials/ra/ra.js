@@ -338,7 +338,7 @@ export const Ra = {
     return V.spaceTheorems >= 36;
   },
   get isRunning() {
-    return player.celestials.ra.run;
+    return player.timespace.unlock || player.celestials.ra.run;
   },
   get totalCharges() {
     return Ra.unlocks.chargedInfinityUpgrades.effectOrDefault(0);

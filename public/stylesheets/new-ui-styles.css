@@ -180,6 +180,14 @@ body.t-s12 {
   border-left-color: var(--color-celestials);
 }
 
+.o-tab-btn--pasts::after {
+  border-left-color: var(--color-pasts);
+}
+
+.o-tab-btn--timespace::after {
+  border-left-color: var(--color-timespace);
+}
+
 .tab-button.shop {
   background-color: #d9bb26;
 }
@@ -330,8 +338,28 @@ body.t-s12 {
   border-color: var(--color-celestials);
 }
 
+.o-tab-btn--pasts .o-subtab__tooltip {
+  color: var(--color-pasts);
+  background: var(--color-prestige--accent);
+  border-color: var(--color-pasts);
+}
+
+.o-tab-btn--timespace .o-subtab__tooltip {
+  color: var(--color-timespace);
+  background: var(--color-prestige--accent);
+  border-color: var(--color-timespace);
+}
+
 .o-tab-btn--celestial .o-subtab__tooltip::after {
   border-top-color: var(--color-celestials);
+}
+
+.o-tab-btn--pasts .o-subtab__tooltip::after {
+  border-top-color: var(--color-pasts);
+}
+
+.o-tab-btn--timespace .o-subtab__tooltip::after {
+  border-top-color: var(--color-timespace);
 }
 
 .active {

@@ -1,5 +1,6 @@
 /* eslint-disable import/extensions */
 import pako from "pako/dist/pako.esm.mjs";
+import { ExtendDatas } from "../player";
 /* eslint-enable import/extensions */
 
 export const GameSaveSerializer = {

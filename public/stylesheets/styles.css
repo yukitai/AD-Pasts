@@ -82,6 +82,8 @@ html {
   --color-reality-light: #d5ffd7;
   --color-reality-dark: #0a790c;
   --color-celestials: #5151ec;
+  --color-pasts: crimson;
+  --color-timespace: #ec51ec;
   --color-prestige--accent: white;
 
   --color-teresa--base: #5151ec;
@@ -752,6 +754,26 @@ button:focus {
 
 .o-tab-btn--celestial:hover {
   background: var(--color-celestials);
+}
+
+.o-tab-btn--pasts {
+  color: var(--color-pasts);
+  background-color: var(--color-prestige--accent);
+  border-color: var(--color-pasts);
+}
+
+.o-tab-btn--timespace:hover {
+  background: var(--color-timespace);
+}
+
+.o-tab-btn--timespace {
+  color: var(--color-timespace);
+  background-color: var(--color-prestige--accent);
+  border-color: var(--color-timespace);
+}
+
+.o-tab-btn--pasts:hover {
+  background: var(--color-pasts);
 }
 
 /* #endregion tab buttons */

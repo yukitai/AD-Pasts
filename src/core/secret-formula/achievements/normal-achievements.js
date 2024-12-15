@@ -1378,6 +1378,63 @@ export const normalAchievements = [
   },
   {
     id: 188,
+    name: "The Cape",
+    description: "Enter the Cape built by Celestials.",
+    get reward() {
+      return "Armageddon won't produce any Remnants but you can gain  one Twisted Time Shard.";
+    }
+  },
+  {
+    id: 191,
+    name: "The End",
+    description: "Beat the game.",
+    checkRequirement: () => GameEnd.endState > END_STATE_MARKERS.GAME_END && !GameEnd.removeAdditionalEnd,
+    checkEvent: GAME_EVENT.GAME_TICK_AFTER
+  },
+  {
+    id: 192,
+    name: "The End",
+    description: "Beat the game.",
+    checkRequirement: () => GameEnd.endState > END_STATE_MARKERS.GAME_END && !GameEnd.removeAdditionalEnd,
+    checkEvent: GAME_EVENT.GAME_TICK_AFTER
+  },
+  {
+    id: 193,
+    name: "The End",
+    description: "Beat the game.",
+    checkRequirement: () => GameEnd.endState > END_STATE_MARKERS.GAME_END && !GameEnd.removeAdditionalEnd,
+    checkEvent: GAME_EVENT.GAME_TICK_AFTER
+  },
+  {
+    id: 194,
+    name: "The End",
+    description: "Beat the game.",
+    checkRequirement: () => GameEnd.endState > END_STATE_MARKERS.GAME_END && !GameEnd.removeAdditionalEnd,
+    checkEvent: GAME_EVENT.GAME_TICK_AFTER
+  },
+  {
+    id: 195,
+    name: "The End",
+    description: "Beat the game.",
+    checkRequirement: () => GameEnd.endState > END_STATE_MARKERS.GAME_END && !GameEnd.removeAdditionalEnd,
+    checkEvent: GAME_EVENT.GAME_TICK_AFTER
+  },
+  {
+    id: 196,
+    name: "The End",
+    description: "Beat the game.",
+    checkRequirement: () => GameEnd.endState > END_STATE_MARKERS.GAME_END && !GameEnd.removeAdditionalEnd,
+    checkEvent: GAME_EVENT.GAME_TICK_AFTER
+  },
+  {
+    id: 197,
+    name: "The End",
+    description: "Beat the game.",
+    checkRequirement: () => GameEnd.endState > END_STATE_MARKERS.GAME_END && !GameEnd.removeAdditionalEnd,
+    checkEvent: GAME_EVENT.GAME_TICK_AFTER
+  },
+  {
+    id: 198,
     name: "The End",
     description: "Beat the game.",
     checkRequirement: () => GameEnd.endState > END_STATE_MARKERS.GAME_END && !GameEnd.removeAdditionalEnd,

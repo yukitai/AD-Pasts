@@ -477,3 +477,24 @@ Currency.galaxyGeneratorGalaxies = new class extends NumberCurrency {
     player.celestials.pelle.galaxyGenerator.spentGalaxies += spent;
   }
 }();
+
+Currency.twistedTimeShards = new class extends DecimalCurrency {
+  get value() { return player.timespace.twistedTimeShards; }
+  set value(value) {
+    player.timespace.twistedTimeShards = value;
+    player.timestudy.maxTwistedTimeShards = value.plus(0);
+  }
+
+  get max() { return player.timestudy.maxTheorem; }
+
+  add(amount) {
+    super.add(amount);
+    player.timestudy.maxTwistedTimeShards = player.timestudy.maxTwistedTimeShards.plus(amount);
+  }
+
+  reset() {
+    //respecTimeStudies(true);
+    super.reset();
+    player.timestudy.maxTwistedTimeShards = this.startingValue;
+  }
+}();

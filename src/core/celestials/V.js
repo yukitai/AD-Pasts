@@ -211,7 +211,7 @@ export const V = {
     return V.spaceTheorems - player.celestials.v.STSpent;
   },
   get isRunning() {
-    return player.celestials.v.run;
+    return player.timespace.unlock || player.celestials.v.run;
   },
   get isFlipped() {
     return Ra.unlocks.unlockHardV.isUnlocked;

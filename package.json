@@ -1,7 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "serve": "node build/check-npm.js && vue-cli-service serve",
+    "check:npm": "node build/check-npm.js",
+    "serve": "vue-cli-service serve",
+    "serve:dist": "node devserver/serve.js",
     "build:master": "node build/pre-build.js && vue-cli-service build --mode master && node build/post-build.js",
     "build:release": "node build/pre-build.js && vue-cli-service build && node build/post-build.js",
     "build:steam-development": "node build/pre-build.js && vue-cli-service build --mode steam-development",
@@ -19,6 +21,7 @@
     "firebase": "^9.6.6",
     "gamma": "^1.0.0",
     "js-sha512": "^0.8.0",
+    "jslint": "^0.12.1",
     "memfs": "^4.2.0",
     "mousetrap": "^1.6.5",
     "pako": "^2.0.4",

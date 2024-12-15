@@ -173,7 +173,7 @@ export const pelleRifts = {
       {
         resource: "recursion",
         requirement: 1,
-        description: "Permanently unlock the Galaxy Generator",
+        description: "Unlock Timespace",
       },
     ],
     galaxyGeneratorText: "Creating more Galaxies is unsustainable, you must focus the $value to allow more"

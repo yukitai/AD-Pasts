@@ -6,6 +6,19 @@ import { DC } from "./constants";
 import { deepmergeAll } from "@/utility/deepmerge";
 import { GlyphTypes } from "./glyph-effects";
 
+export const ExtendDatas = {
+  modded: "pasts",
+  timespace: {
+    unlock: false,
+    twistedTimeShards: DC.D0,
+    maxTwistedTimeShards: DC.D0,
+    nodesActive: [],
+  },
+  pasts: {
+    unlock: false,
+  }
+}
+
 // This is actually reassigned when importing saves
 // eslint-disable-next-line prefer-const
 window.player = {
@@ -914,6 +927,7 @@ window.player = {
       id: false,
     }
   },
+  ...ExtendDatas
 };
 
 export const Player = {

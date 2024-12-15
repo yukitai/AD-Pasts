@@ -52,7 +52,7 @@ export const Teresa = {
     return this.rewardMultiplier(player.celestials.teresa.bestRunAM);
   },
   get isRunning() {
-    return player.celestials.teresa.run;
+    return player.timespace.unlock || player.celestials.teresa.run;
   },
   get runCompleted() {
     return player.celestials.teresa.bestRunAM.gt(1);
