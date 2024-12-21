@@ -493,7 +493,7 @@ Currency.twistedTimeShards = new class extends DecimalCurrency {
   }
 
   reset() {
-    //respecTimeStudies(true);
+    // RespecTimeStudies(true);
     super.reset();
     player.timestudy.maxTwistedTimeShards = this.startingValue;
   }

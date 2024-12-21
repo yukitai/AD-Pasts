@@ -165,7 +165,7 @@ export const Enslaved = {
     this.quotes.startRun.show();
   },
   get isRunning() {
-    return player.celestials.enslaved.run;
+    return player.timespace.unlock || player.celestials.enslaved.run;
   },
   completeRun() {
     player.celestials.enslaved.completed = true;

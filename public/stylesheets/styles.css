@@ -9312,3 +9312,47 @@ input.o-automator-block-input {
   width: 100%;
   height: 100%;
 }
+
+/* #region o-timeline-node-btn */
+
+.o-timeline-node-btn {
+  display: inline-block;
+  text-align: center;
+  width: 19rem;
+  height: 9rem;
+  font-family: Typewriter, serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-timespace);
+  background-color: var(--color-prestige--accent);
+  border: 0.1rem solid var(--color-timespace);
+  border-radius: var(--var-border-radius, 0.4rem);
+  transition-duration: 0.2s;
+  cursor: pointer;
+  margin-right: 2.4rem;
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.o-timeline-node-btn::before {
+  content: "";
+  width: 2.4rem;
+  height: 0.5rem;
+  background: var(--color-timespace);
+  display: block;
+  position: absolute;
+  left: -2.5rem;
+  top: 4.1rem;
+}
+
+.o-timeline-node-btn:hover {
+  color: var(--color-text-inverted);
+  background-color: var(--color-timespace);
+}
+
+.o-timeline-node-btn-active {
+  color: var(--color-text-inverted);
+  background-color: var(--color-timespace);
+}
+
+/* #region o-timeline-node-btn--available */

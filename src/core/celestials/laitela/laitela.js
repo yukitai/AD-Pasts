@@ -17,7 +17,7 @@ export const Laitela = {
     this.celestial.run = true;
   },
   get isRunning() {
-    return this.celestial.run;
+    return player.timespace.unlock || this.celestial.run;
   },
   get difficultyTier() {
     return player.celestials.laitela.difficultyTier;
@@ -26,6 +26,9 @@ export const Laitela = {
     player.celestials.laitela.difficultyTier = tier;
   },
   get maxAllowedDimension() {
+    if (player.timespace.unlock) {
+      return player.timespace.maxAllowedDimension;
+    }
     return 8 - this.difficultyTier;
   },
   get isFullyDestabilized() {

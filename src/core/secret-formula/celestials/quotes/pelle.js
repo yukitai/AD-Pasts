@@ -45,7 +45,7 @@ const paramount =    ["Paramount",     "Deity",         "Monarch"];
 const player =       ["You",           "Phonomania",    "Victor"];
 const stopped =      ["Stopped",       "Imprisoned",    "Prevented"];
 const completely =   ["Completely",    "Thorough",      "Undisputed"];
-const existed =      ["Existed",       "Been",          "Deity"]
+const existed =      ["Existed",       "Been",          "Deity"];
 /* eslint-enable no-multi-spaces */
 
 export const pelleQuotes = {

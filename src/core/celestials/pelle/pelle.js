@@ -7,8 +7,9 @@ import { Quotes } from "../quotes";
 
 import wordShift from "../../word-shift";
 
-import zalgo from "./zalgo";
 import { Achievement } from "../../globals";
+
+import zalgo from "./zalgo";
 
 
 const disabledMechanicUnlocks = {
@@ -388,10 +389,10 @@ EventHub.logic.on(GAME_EVENT.GAME_TICK_AFTER, () => {
   if (PelleRifts.recursion.milestones[2].canBeApplied) {
     Pelle.quotes.beatPelle.show();
     player.timespace.unlock = true;
-    Achievement(188).unlock()
+    Achievement(188).unlock();
     beginProcessReality(getRealityProps(true));
   }
-})
+});
 
 export class RebuyablePelleUpgradeState extends RebuyableMechanicState {
   get currency() {

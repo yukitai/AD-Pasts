@@ -5,6 +5,7 @@ import { AUTOMATOR_MODE, AUTOMATOR_TYPE } from "./automator/automator-backend";
 import { DC } from "./constants";
 import { deepmergeAll } from "@/utility/deepmerge";
 import { GlyphTypes } from "./glyph-effects";
+import { timelineLayout } from "../components/tabs/timeline/timeline-layout";
 
 export const ExtendDatas = {
   modded: "pasts",
@@ -12,12 +13,14 @@ export const ExtendDatas = {
     unlock: false,
     twistedTimeShards: DC.D0,
     maxTwistedTimeShards: DC.D0,
+    maxAllowedDimension: 0,
     nodesActive: [],
+    timelineBits: timelineLayout.getInitialBits(),
   },
   pasts: {
     unlock: false,
   }
-}
+};
 
 // This is actually reassigned when importing saves
 // eslint-disable-next-line prefer-const
