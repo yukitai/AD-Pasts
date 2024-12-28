@@ -80,8 +80,12 @@ export const confirmationTypes = [
     option: "armageddon",
     isUnlocked: () => Pelle.isDoomed,
   }, {
+    name: "Back to Doom",
+    option: "backToStart",
+    isUnlocked: () => Timespace.isUnlocked,
+  }, {
     name: "Respec Shop Purchases",
     option: "respecIAP",
-    isUnlocked: () => Cloud.isAvailable
+    isUnlocked: () => Cloud.isAvailable,
   }
 ];

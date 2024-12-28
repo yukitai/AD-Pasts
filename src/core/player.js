@@ -5,6 +5,7 @@ import { AUTOMATOR_MODE, AUTOMATOR_TYPE } from "./automator/automator-backend";
 import { DC } from "./constants";
 import { deepmergeAll } from "@/utility/deepmerge";
 import { GlyphTypes } from "./glyph-effects";
+import { ModExtended } from "./player-ext";
 
 // This is actually reassigned when importing saves
 // eslint-disable-next-line prefer-const
@@ -764,6 +765,7 @@ window.player = {
   triggeredTabNotificationBits: 0,
   tutorialState: 0,
   tutorialActive: true,
+  extend: ModExtended,
   options: {
     news: {
       enabled: true,
@@ -864,7 +866,8 @@ window.player = {
       antimatterGalaxy: true,
       dimensionBoost: true,
       switchAutomatorMode: true,
-      respecIAP: true
+      respecIAP: true,
+      backToStart: true,
     },
     awayProgress: {
       antimatter: true,

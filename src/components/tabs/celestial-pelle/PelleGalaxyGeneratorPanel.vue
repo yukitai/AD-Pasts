@@ -66,8 +66,9 @@ export default {
       player.celestials.pelle.collapsed.galaxies = !this.isCollapsed;
     },
     unlock() {
-      player.celestials.pelle.galaxyGenerator.unlocked = true;
-      Pelle.quotes.galaxyGeneratorUnlock.show();
+      // eslint-disable-next-line capitalized-comments
+      // player.celestials.pelle.galaxyGenerator.unlocked = true;
+      // Pelle.quotes.galaxyGeneratorUnlock.show();
     }
   },
 };
@@ -88,7 +89,10 @@ export default {
       v-if="!isCollapsed"
       class="l-pelle-content-container"
     >
-      <div v-if="isUnlocked">
+      <div
+        v-if="isUnlocked"
+        class="l-pelle-galaxy-generator-container"
+      >
         <div>
           You have a total of
           <span class="c-galaxies-amount">{{ galaxyText }}</span>
@@ -150,11 +154,35 @@ export default {
       >
         Unlock the Galaxy Generator
       </button>
+      <span class="c-pelle-symbol-overlay">♅</span>
     </div>
   </div>
 </template>
 
 <style scoped>
+.c-pelle-symbol-overlay {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 18rem;
+  font-weight: bold;
+  color: var(--color-pelle--base);
+  text-shadow: 0 0 3rem;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+.l-pelle-content-container {
+  position: relative;
+}
+
 .c-collapse-icon-clickable {
   position: absolute;
   top: 50%;
@@ -176,6 +204,11 @@ export default {
   border-radius: var(--var-border-radius, 0.5rem);
   padding: 2rem;
   cursor: pointer;
+  filter: grayscale(1);
+}
+
+.c-generator-unlock-button:hover {
+  cursor: not-allowed;
 }
 
 .l-galaxy-generator-upgrades-container {

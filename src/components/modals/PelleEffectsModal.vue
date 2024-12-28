@@ -10,7 +10,7 @@ export default {
   },
   computed: {
     nerfs() {
-      return [
+      const nerfs = [
         // Numerical nerfs and disabled boosts
         "Anything unlocked through a Pelle upgrade cannot be unlocked normally",
         "All pre-Doomed IP and EP multipliers are disabled",
@@ -55,8 +55,17 @@ export default {
         "Infinity Upgrades cannot be charged",
         "Triad Studies and Space Theorems are disabled",
         "Imaginary Upgrades are disabled excluding those relating to DMD's and Celestial unlocks",
-        "Continuum and Singularity rewards are disabled"
+        "Continuum and Singularity rewards are disabled",
+
+        // Disable the Galaxy Generator
+        "???",
       ];
+
+      if (Timespace.isUnlocked) {
+        nerfs[nerfs.length - 1] = "Galaxy Generator cannot be unlocked";
+      }
+
+      return nerfs;
     }
   }
 };

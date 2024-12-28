@@ -220,4 +220,15 @@ export const tabNotifications = {
     // Always externally triggered
     condition: () => true,
   },
+  timespaceUnlock: {
+    id: 17,
+    tabsToHighLight: [
+      {
+        parent: "timespace",
+        tab: "timeline",
+      },
+    ],
+    // Always externally triggered
+    condition: () => true,
+  },
 };

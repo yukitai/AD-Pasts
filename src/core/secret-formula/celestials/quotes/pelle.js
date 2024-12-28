@@ -13,6 +13,8 @@ const flashCelestial = [
 const primaryBackground = cel => [["pelle", 1.5], [cel, 1.5]];
 
 /* eslint-disable no-multi-spaces */
+const destroyed =    ["Destroyed",         "Broken",         "Beaten"];
+
 const destroyer =    ["False",         "Deity",         "Destroyer"];
 const eternal =      ["Eternal",       "Deity",         "Monarch"];
 const lesser =       ["Lesser",        "Deity",         "Monarch"];
@@ -357,6 +359,17 @@ export const pelleQuotes = {
         text: "Back to watching the $1 flounder.",
         1: destroyer
       }
+    ],
+  },
+  timespace: {
+    id: 12,
+    lines: [
+      "What is that?",
+      { text: "The $1?", 1: filament },
+      { text: "Did you create all the $1 around you?", 1: cluster },
+      "Was that your plan? Very, very smart.",
+      "But it's no use.",
+      { text: "You will still be $1 here.", 1: destroyed }
     ],
   },
   galaxyGeneratorUnlock: {

@@ -8,6 +8,9 @@ import { Quotes } from "../quotes";
 import wordShift from "../../word-shift";
 
 import zalgo from "./zalgo";
+import { PelleStrikes } from "./strikes";
+import { PelleRifts } from "./rifts";
+import { TabNotification } from "../../tab-notifications";
 
 
 const disabledMechanicUnlocks = {
@@ -379,6 +382,14 @@ EventHub.logic.on(GAME_EVENT.PELLE_STRIKE_UNLOCKED, () => {
   }
   if (PelleStrikes.dilation.hasStrike) {
     Pelle.quotes.strike5.show();
+  }
+});
+EventHub.logic.on(GAME_EVENT.GAME_TICK_AFTER, () => {
+  if (player.extend.timespace.unlock) return;
+  if (PelleRifts.recursion.milestones[2].canBeApplied) {
+    player.extend.timespace.unlock = true;
+    Pelle.quotes.timespace.show();
+    TabNotification.timespaceUnlock.tryTrigger();
   }
 });
 

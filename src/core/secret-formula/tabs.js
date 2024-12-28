@@ -479,12 +479,31 @@ export const tabs = [
     ]
   },
   {
+    key: "timespace",
+    name: "Timespace",
+    UIClass: "o-tab-btn--timespace",
+    hideAt: 2.5,
+    condition: () => Timespace.isUnlocked,
+    id: 10,
+    hidable: true,
+    subtabs: [
+      {
+        key: "timeline",
+        name: "Timeline",
+        symbol: "⋈",
+        component: "TimelineTab",
+        id: 0,
+        hidable: true
+      }
+    ]
+  },
+  {
     key: "shop",
     name: "Shop",
     newUIClass: "shop",
     hideAt: 1.5,
     condition: () => Cloud.isAvailable,
-    id: 10,
+    id: 11,
     hidable: true,
     subtabs: [
       {

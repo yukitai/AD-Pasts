@@ -82,6 +82,7 @@ html {
   --color-reality-light: #d5ffd7;
   --color-reality-dark: #0a790c;
   --color-celestials: #5151ec;
+  --color-timespace: crimson;
   --color-prestige--accent: white;
 
   --color-teresa--base: #5151ec;
@@ -752,6 +753,16 @@ button:focus {
 
 .o-tab-btn--celestial:hover {
   background: var(--color-celestials);
+}
+
+.o-tab-btn--timespace {
+  color: var(--color-timespace);
+  background-color: var(--color-prestige--accent);
+  border-color: var(--color-timespace);
+}
+
+.o-tab-btn--timespace:hover {
+  background: var(--color-timespace);
 }
 
 /* #endregion tab buttons */
@@ -9096,6 +9107,15 @@ input.o-automator-block-input {
 
 .c-hide-modal-tab-button--celestials:hover {
   background: var(--color-celestials);
+}
+
+.c-hide-modal-tab-button--timespace {
+  color: var(--color-timespace);
+  border-color: var(--color-timespace);
+}
+
+.c-hide-modal-tab-button--timespace:hover {
+  background: var(--color-timespace);
 }
 
 /* Prevent any themes overriding font awesome */

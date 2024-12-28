@@ -39,6 +39,7 @@ import StatisticsTab from "./statistics/StatisticsTab";
 import TeresaTab from "./celestial-teresa/TeresaTab";
 import TimeDilationTab from "./time-dilation/TimeDilationTab";
 import TimeDimensionsTab from "./time-dimensions/TimeDimensionsTab";
+import TimelineTab from "./timeline/TimelineTab";
 import TimeStudiesTab from "./time-studies/TimeStudiesTab";
 import VTab from "./celestial-v/VTab";
 
@@ -84,7 +85,8 @@ const TabComponents = {
   AlchemyTab,
   CelestialNavigationTab,
   ShopTab,
-  MultiplierBreakdownTab
+  MultiplierBreakdownTab,
+  TimelineTab,
 };
 
 export default TabComponents;
