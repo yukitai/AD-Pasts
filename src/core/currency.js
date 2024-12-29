@@ -477,3 +477,10 @@ Currency.galaxyGeneratorGalaxies = new class extends NumberCurrency {
     player.celestials.pelle.galaxyGenerator.spentGalaxies += spent;
   }
 }();
+
+Currency.timeRemnants = new class extends DecimalCurrency {
+  get value() { return player.extend.timespace.timeline.timeRemnants; }
+  set value(value) {
+    player.extend.timespace.timeline.timeRemnants = value;
+  }
+}();

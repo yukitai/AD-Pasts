@@ -1,6 +1,7 @@
 <script>
 import PrimaryButton from "@/components/PrimaryButton";
 import PrimaryToggleButton from "@/components/PrimaryToggleButton";
+import { Timespace } from "../../../core/timespace/timespace";
 
 export default {
   name: "AutobuyerToggles",
@@ -11,6 +12,7 @@ export default {
   data() {
     return {
       isDoomed: false,
+      isContinuumRegain: false,
       autobuyersOn: false,
       showContinuum: false,
       disableContinuum: false,
@@ -32,6 +34,7 @@ export default {
   methods: {
     update() {
       this.isDoomed = Pelle.isDoomed;
+      this.isContinuumRegain = Timespace.isContinuumRegain;
       this.autobuyersOn = player.auto.autobuyersOn;
       this.showContinuum = Laitela.isUnlocked;
       this.disableContinuum = player.auto.disableContinuum;
@@ -60,7 +63,7 @@ export default {
     >
       {{ allAutobuyersDisabled ? "Enable" : "Disable" }} all autobuyers
     </PrimaryButton>
-    <span v-if="isDoomed">
+    <span v-if="isDoomed && !isContinuumRegain">
       <PrimaryButton
         v-if="showContinuum"
         class="o-primary-btn--subtab-option"

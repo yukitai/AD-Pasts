@@ -1,4 +1,5 @@
 <script>
+import { Timespace } from "../../core/timespace/timespace";
 import HeaderBlackHole from "./HeaderBlackHole";
 import HeaderChallengeDisplay from "./HeaderChallengeDisplay";
 import HeaderChallengeEffects from "./HeaderChallengeEffects";

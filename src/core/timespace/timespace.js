@@ -1,6 +1,6 @@
 import { Currency } from "../currency";
-import { Pelle } from "../globals";
 import { DC } from "../constants";
+import { Pelle } from "../globals";
 
 export const Timespace = {
   get isBacked() {
@@ -11,6 +11,29 @@ export const Timespace = {
     return player.extend.timespace.unlock;
   },
 
+  get isContinuumRegain() {
+    return this.isBacked;
+  },
+
+  get canBackToStart() {
+    return this.timeRemnantsGain.gte(1);
+  },
+
+  get TRdivide() {
+    return 4000;
+  },
+
+  get TRpower() {
+    return 3;
+  },
+
+  get timeRemnantsGain() {
+    if (!PelleRifts.recursion.milestones[2].canBeApplied) return DC.D0;
+    const ep = Pelle.cel.records.totalEternityPoints.plus(1).log10();
+    const gain = Decimal.pow(ep / this.TRdivide, this.TRpower);
+    return Decimal.floor(gain);
+  },
+
   backToStart() {
     if (!Glyphs.unequipAll()) {
       Modal.hideAll();
@@ -18,6 +41,8 @@ export const Timespace = {
         Glyphs could not be unequipped due to lack of inventory space.`, 1);
       return;
     }
+
+    Currency.timeRemnants.add(this.timeRemnantsGain);
 
     respecTimeStudies(true);
 

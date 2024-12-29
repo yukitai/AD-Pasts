@@ -5,6 +5,7 @@ import RealityCurrencyHeader from "../../RealityCurrencyHeader";
 import HeaderTickspeedInfo from "../HeaderTickspeedInfo";
 
 import RealityButton from "./RealityButton";
+import BackToDoomButton from "../../tabs/timeline/BackToDoomButton.vue";
 
 // This component contains antimatter and antimatter rate at the start of the game, as well as some additional
 // information depending on the UI (tickspeed for Classic, game speed for Modern). Everything but antimatter is
@@ -16,6 +17,7 @@ export default {
     RealityCurrencyHeader,
     RealityButton,
     ArmageddonButton,
+    BackToDoomButton,
   },
   data() {
     return {
@@ -47,6 +49,7 @@ export default {
     v-if="shouldDisplay"
     class="c-prestige-button-container"
   >
+    <BackToDoomButton :is-header="true" /><br>
     <span>You have <span class="c-game-header__antimatter">{{ format(antimatter, 2, 1) }}</span> antimatter.</span>
     <div
       v-if="hasRealityButton"

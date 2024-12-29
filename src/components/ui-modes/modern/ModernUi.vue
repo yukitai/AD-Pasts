@@ -1,4 +1,5 @@
 <script>
+import { Timespace } from "../../../core/timespace/timespace";
 import BigCrunchButton from "../BigCrunchButton";
 import HeaderBlackHole from "../HeaderBlackHole";
 import HeaderChallengeDisplay from "../HeaderChallengeDisplay";
@@ -25,6 +26,7 @@ export default {
       bigCrunch: false,
       hasReality: false,
       newGameKey: "",
+      backUnlocked: false,
     };
   },
   computed: {
@@ -33,6 +35,11 @@ export default {
     },
     topMargin() {
       return this.$viewModel.news ? "" : "margin-top: 3.9rem";
+    },
+    infoHeaderStyle() {
+      return this.backUnlocked ? {
+        "padding-top": "3.1rem",
+      } : {};
     }
   },
   methods: {
@@ -43,6 +50,7 @@ export default {
       // This only exists to force a key-swap after pressing the button to start a new game; the news ticker can break
       // if it isn't redrawn
       this.newGameKey = Pelle.isDoomed;
+      this.backUnlocked = Timespace.isUnlocked;
     },
     handleClick() {
       if (PlayerProgress.infinityUnlocked()) manualBigCrunchResetRequest();
@@ -73,7 +81,7 @@ export default {
         class="tab-container"
       >
         <HeaderPrestigeGroup />
-        <div class="information-header">
+        <div class="information-header" :style="infoHeaderStyle">
           <HeaderChallengeDisplay />
           <HeaderChallengeEffects />
           <GameSpeedDisplay v-if="hasReality" />

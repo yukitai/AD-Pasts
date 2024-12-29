@@ -1,23 +1,17 @@
 <script>
-import { Timespace } from "@/core/timespace/timespace";
-import TimelineLayout from "./TimelineLayout";
-
 export default {
   name: "TimelineTab",
-  components: {
-    TimelineLayout,
-  },
+  components: {},
   data() {
-    return {};
+    return {
+      timeRemnants: new Decimal(0),
+    };
   },
-  computed: {},
+  computed: {
+  },
   methods: {
     update() {
-      // Snip
-    },
-    backToStart() {
-      if (player.options.confirmations.backToStart) Modal.backToStart.show();
-      else Timespace.backToStart();
+      this.timeRemnants.copyFrom(Currency.timeRemnants);
     },
   },
 };
@@ -25,12 +19,9 @@ export default {
 
 <template>
   <div>
-    <button @click="backToStart">
-      Back to Doom
-    </button>
-    <div>
-      <TimelineLayout />
-    </div>
+    <span class="c-tr-amount">
+      You have {{ quantify("Time Remnant", timeRemnants, 2, 0) }}.
+    </span>
   </div>
 </template>
 

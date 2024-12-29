@@ -11,6 +11,7 @@ import zalgo from "./zalgo";
 import { PelleStrikes } from "./strikes";
 import { PelleRifts } from "./rifts";
 import { TabNotification } from "../../tab-notifications";
+import { Timespace } from "../../timespace/timespace";
 
 
 const disabledMechanicUnlocks = {
@@ -30,7 +31,7 @@ const disabledMechanicUnlocks = {
   glyphs: () => !PelleRifts.vacuum.milestones[0].canBeApplied,
   V: () => ({}),
   singularity: () => ({}),
-  continuum: () => ({}),
+  continuum: () => !Timespace.isContinuumRegain,
   alchemy: () => ({}),
   achievementMult: () => ({}),
   blackhole: () => ({}),
