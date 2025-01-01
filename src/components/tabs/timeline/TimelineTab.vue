@@ -56,6 +56,6 @@ export default {
   width: 0;
   display: inline-block;
   margin-top: 4rem;
-  margin-bottom: 10rem;
+  padding-bottom: 10rem;
 }
 </style>
