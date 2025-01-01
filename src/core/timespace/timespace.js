@@ -2,6 +2,8 @@ import { Currency } from "../currency";
 import { DC } from "../constants";
 import { Pelle } from "../globals";
 
+import { TU } from "./timeline-upgrade";
+
 export const Timespace = {
   get isBacked() {
     return player.extend.timespace.backCount > 0;
@@ -11,8 +13,12 @@ export const Timespace = {
     return player.extend.timespace.unlock;
   },
 
+  get isImaginaryDimensionsUnlock() {
+    return TU(1).isActive;
+  },
+
   get isContinuumRegain() {
-    return this.isBacked;
+    return TU(11).isActive;
   },
 
   get canBackToStart() {
