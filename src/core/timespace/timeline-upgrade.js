@@ -58,7 +58,7 @@ export class TimelineUpgrade {
   }
 
   get canBuy() {
-    return this.buyCount < this.maxBuyCount && Currency.timeRemnants.gte(this.getCost());
+    return this.condition() && this.buyCount < this.maxBuyCount && Currency.timeRemnants.gte(this.getCost());
   }
 }
 
